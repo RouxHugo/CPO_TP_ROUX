@@ -56,22 +56,22 @@ public class TP1_guessMyNumber_ROUX {
             tentatives++;
 
             // Comparaison des nombres
-            if (nombreUtilisateur < nombreAleatoire) {
-                if (nombreAleatoire - nombreUtilisateur > 20) {
-                    System.out.println("Vraiment trop petit !");
+                if (nombreUtilisateur < nombreAleatoire) {
+                    if (nombreAleatoire - nombreUtilisateur > 20 && "facile".equals(difficulte) ) {
+                        System.out.println("Vraiment trop petit !");
+                    } else {
+                        System.out.println("Trop petit !");
+                    }
+                } else if (nombreUtilisateur > nombreAleatoire) {
+                    if (nombreUtilisateur - nombreAleatoire > 20 && "facile".equals(difficulte)) {
+                        System.out.println("Vraiment trop grand !");
+                    } else {
+                        System.out.println("Trop grand !");
+                    }
                 } else {
-                    System.out.println("Trop petit !");
+                    System.out.println("Gagné ! Le nombre était " + nombreAleatoire);
+                    trouve = true;
                 }
-            } else if (nombreUtilisateur > nombreAleatoire) {
-                if (nombreUtilisateur - nombreAleatoire > 20) {
-                    System.out.println("Vraiment trop grand !");
-                } else {
-                    System.out.println("Trop grand !");
-                }
-            } else {
-                System.out.println("Gagné ! Le nombre était " + nombreAleatoire);
-                trouve = true;
-            }
         }
 
         if (!trouve) {
