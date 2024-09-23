@@ -38,15 +38,14 @@ public class TP1_manipNombresInt_ROUX {
         System.out.println("Le produit des deux nombres est: " + produit);
     
         // Calcul du quotient entier et du reste de la division euclidienne
-        if (num2 != 0) {
+       
             int quotient = num1 / num2;
             int reste = num1 % num2;
 
             // Affichage du quotient et du reste
             System.out.println("Le quotient de la division de " + num1 + " par " + num2 + " est: " + quotient);
             System.out.println("Le reste de la division euclidienne de " + num1 + " par " + num2 + " est: " + reste);
-        } else {
-            System.out.println("Division par zéro non permise.");
-        }
+        
+        
     }
 }
