@@ -7,7 +7,7 @@ package tp1_manipnombresint_roux;
 import java.util.Scanner;
 
 /**
- *
+ * @date 23/09/2024
  * @author hugor
  */
 public class TP1_manipNombresInt_ROUX {
