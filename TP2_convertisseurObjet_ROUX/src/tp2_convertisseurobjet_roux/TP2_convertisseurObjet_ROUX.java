@@ -17,9 +17,7 @@ public class TP2_convertisseurObjet_ROUX {
      */ 
     public static void main(String[] args) {
 
-
-
-        Scanner scanner = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
         Convertisseur convertisseur = new Convertisseur();
         int choix = 0;
 
