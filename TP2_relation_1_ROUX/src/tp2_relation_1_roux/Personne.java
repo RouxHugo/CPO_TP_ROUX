@@ -11,11 +11,15 @@ package tp2_relation_1_roux;
 public class Personne {
      String nom;
      String prenom;
+     int nbVoitures ;
+    Voiture [] liste_voitures ;
 
     // Constructeur
     public Personne(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
+        liste_voitures = new Voiture [3] ;
+        this.nbVoitures = 0;
     }
 
     // Méthode toString() pour afficher les informations de la personne
@@ -26,4 +30,5 @@ public class Personne {
                 ", prénom='" + prenom + '\'' +
                 '}';
     }
+    
 }

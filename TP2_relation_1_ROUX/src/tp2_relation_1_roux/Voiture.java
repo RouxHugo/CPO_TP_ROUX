@@ -12,12 +12,14 @@ public class Voiture {
      String modele;
      String marque;
      int puissanceCV;
+     Personne Proprietaire ;
 
     // Constructeur
     public Voiture(String modele, String marque, int puissanceCV) {
         this.modele = modele;
         this.marque = marque;
         this.puissanceCV = puissanceCV;
+        this.Proprietaire = null;
     }
      // Méthode toString() pour afficher les informations de la voiture
     @Override
