@@ -9,5 +9,9 @@ package tp2_manip_roux;
  * @author hugor
  */
 public class Tartiflette {
+    int nbCalories;
+        public Tartiflette (int calories){
+        nbCalories = calories;
+                }
     
 }

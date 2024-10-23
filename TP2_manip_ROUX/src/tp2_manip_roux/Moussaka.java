@@ -9,5 +9,9 @@ package tp2_manip_roux;
  * @author hugor
  */
 public class Moussaka {
+    int nbCalories;
     
+    public Moussaka (int calories){
+        nbCalories = calories;
+                }
 }
