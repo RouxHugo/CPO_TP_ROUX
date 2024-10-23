@@ -9,26 +9,48 @@ package tp2_relation_1_roux;
  * @author hugor
  */
 public class Voiture {
-     String modele;
-     String marque;
-     int puissanceCV;
-     Personne Proprietaire ;
-
+    // Attributs
+    String modele;
+    String marque;
+    int puissanceCV;
+    Personne proprietaire;
     // Constructeur
     public Voiture(String modele, String marque, int puissanceCV) {
         this.modele = modele;
         this.marque = marque;
         this.puissanceCV = puissanceCV;
-        this.Proprietaire = null;
-    }
-     // Méthode toString() pour afficher les informations de la voiture
-    @Override
-    public String toString() {
-        return "Voiture{" +
-                "modèle='" + modele + '\'' +
-                ", marque='" + marque + '\'' +
-                ", puissance=" + puissanceCV + "CV" +
-                '}';
-    }
+        this.proprietaire = null;
 }
 
+    // Méthode toString pour représenter l'objet sous forme de chaîne de caractères
+    @Override
+    public String toString() {
+return "Voiture{" +"modèle='" + modele + '\'' +", marque='" + marque + '\'' + ", puissanceCV=" + puissanceCV +", proprietaire=" + (proprietaire != null ? proprietaire.getNom() + " " + proprietaire.getPrenom() : "Aucun") +'}';    }
+    // Getters et setters (si nécessaire)
+    public String getModele() {
+        return modele;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public String getMarque() {
+        return marque;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
+    public int getPuissanceCV() {
+        return puissanceCV;
+    }
+
+    public void setPuissanceCV(int puissanceCV) {
+        this.puissanceCV = puissanceCV;
+    }
+    public void setProprietaire(Personne proprietaire) {
+        this.proprietaire = proprietaire;
+    }
+}
