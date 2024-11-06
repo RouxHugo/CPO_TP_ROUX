@@ -8,7 +8,7 @@ package tp3_heroic_fantasy_roux;
  *
  * @author hugor
  */
-abstract class Arme {
+public abstract class Arme {
     String nom;
     int nv_attaque;
     
