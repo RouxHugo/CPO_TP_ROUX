@@ -4,6 +4,9 @@
  */
 package tp3_heroic_fantasy_roux;
 
+import Personnages.Guerrier;
+import Personnages.Magicien;
+import Personnages.Personnage;
 import Armes.Arme;
 import Armes.baton;
 import Armes.Epee;
@@ -43,7 +46,26 @@ public class TP3_Heroic_Fantasy_ROUX {
         for (int i = 0; i < armes.size(); i++) {
             Arme arme = armes.get(i); 
             System.out.println(arme);
+            
+            Magicien gandalf = new Magicien("Gandalf", 65, true); // confirmé
+        Magicien garcimore = new Magicien("Garcimore", 44, false); // novice
+
+        // Création des guerriers avec des paramètres différents
+        Guerrier conan = new Guerrier("Conan", 78, false); // à pied
+        Guerrier lannister = new Guerrier("Lannister", 45, true); // à cheval
+
+        // Création d'un tableau dynamique pour stocker les personnages
+        ArrayList<Personnage> personnages = new ArrayList<>();
+        personnages.add(gandalf);
+        personnages.add(garcimore);
+        personnages.add(conan);
+        personnages.add(lannister);
+
+        // Affichage des caractéristiques de chaque personnage
+        for (Personnage personnage : personnages) {
+            System.out.println(personnage);
         }
     }
     
+    }
 }
