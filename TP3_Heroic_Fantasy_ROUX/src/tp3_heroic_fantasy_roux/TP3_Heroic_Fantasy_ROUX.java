@@ -4,6 +4,9 @@
  */
 package tp3_heroic_fantasy_roux;
 
+import Armes.Arme;
+import Armes.baton;
+import Armes.Epee;
 import java.util.ArrayList;
 
 /**
