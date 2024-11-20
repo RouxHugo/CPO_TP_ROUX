@@ -79,8 +79,8 @@ public class TP3_Heroic_Fantasy_ROUX {
         // Tester un nom d'arme qui n'existe pas
         arthur.equiperArme("Inexistante");
         
-        Guerrier leonidas = new Guerrier("Leonidas", 99, true);
-        Magicien ryze = new Magicien("Ryze", 12, false);
+        Guerrier pantheon = new Guerrier("pantheon", 99, true);
+        Magicien ahri = new Magicien("ahri", 12, false);
 
         // Création des armes
         Epee xiphos = new Epee("Naue II", 8, 9);
@@ -92,22 +92,22 @@ public class TP3_Heroic_Fantasy_ROUX {
         Baton vigne = new Baton("Gul", 3, 4);
         
         // Ajout des armes au guerrier (Leonidas)
-        leonidas.ajouterArme(or); // 1 bâton
-        leonidas.ajouterArme(xiphos); // 1ère épée
-        leonidas.ajouterArme(kukuri); // 2ème épée
-        leonidas.equiperArme("Naue II"); // Choix de l'épée "Naue II"
+        pantheon.ajouterArme(or); // 1 bâton
+        pantheon.ajouterArme(xiphos); // 1ère épée
+        pantheon.ajouterArme(kukuri); // 2ème épée
+        pantheon.equiperArme("Naue II"); // Choix de l'épée "Naue II"
 
         // Ajout des armes au magicien (Ryze)
-        ryze.ajouterArme(argent); // 1er bâton
-        ryze.ajouterArme(vigne); // 2ème bâton
-        ryze.ajouterArme(espadon); // 1 épée
+        ahri.ajouterArme(argent); // 1er bâton
+        ahri.ajouterArme(vigne); // 2ème bâton
+        ahri.ajouterArme(espadon); // 1 épée
 
         // Affichage du nombre d'armes de prédilection pour le magicien
-        System.out.println("Nombre d'armes de predilection de Ryze : " + ryze.compterArmesDePredilection());
+        System.out.println("Nombre d'armes de predilection de Ryze : " + ahri.compterArmesDePredilection());
 
         // Affichage des caractéristiques des personnages
-        System.out.println(leonidas);
-        System.out.println(ryze);
+        System.out.println(pantheon);
+        System.out.println(ahri);
            
 
         // Affichage des compteurs
@@ -117,23 +117,23 @@ public class TP3_Heroic_Fantasy_ROUX {
         
 
         // Fatigue du guerrier
-        leonidas.seFatiguer();
+        pantheon.seFatiguer();
         System.out.println("Après fatigue du guerrier : ");
-        System.out.println(leonidas);
-        System.out.println("Le guerrier est-il toujours vivant ? " + leonidas.estVivant());
-        ryze.equiperArme("Rose");
+        System.out.println(pantheon);
+        System.out.println("Le guerrier est-il toujours vivant ? " + pantheon.estVivant());
+        ahri.equiperArme("Rose");
         // Le magicien attaque le guerrier
-        ryze.attaquer(leonidas);
+        ahri.attaquer(pantheon);
         System.out.println("Après l'attaque du magicien sur le guerrier : ");
-        System.out.println(leonidas);
-        System.out.println(ryze);
-        System.out.println("Le guerrier est-il toujours vivant ? " + leonidas.estVivant());
+        System.out.println(pantheon);
+        System.out.println(ahri);
+        System.out.println("Le guerrier est-il toujours vivant ? " + pantheon.estVivant());
 
         // Le guerrier attaque le magicien
-        leonidas.attaquer(ryze);
+        pantheon.attaquer(ahri);
         System.out.println("Après l'attaque du guerrier sur le magicien : ");
-        System.out.println(ryze);
-        System.out.println(leonidas);
-        System.out.println("Le magicien est-il toujours vivant ? " + ryze.estVivant());
+        System.out.println(ahri);
+        System.out.println(pantheon);
+        System.out.println("Le magicien est-il toujours vivant ? " + ahri.estVivant());
     }
         }

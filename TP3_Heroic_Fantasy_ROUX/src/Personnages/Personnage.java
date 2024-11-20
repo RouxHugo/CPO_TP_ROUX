@@ -17,7 +17,7 @@ import Armes.Arme;
 import Armes.Baton;
 import Armes.Epee;
 import java.util.ArrayList;
-import TP3_Heroic_Fantasy_ROUX.EtreVivant;
+import tp3_heroic_fantasy_roux.EtreVivant;
 
 public abstract class Personnage implements EtreVivant{
     private String nom;
