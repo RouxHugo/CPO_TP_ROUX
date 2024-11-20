@@ -9,27 +9,45 @@ package Personnages;
  * @author hugor
  */
 public class Magicien extends Personnage {
-    private boolean estConfirme;
+    private boolean confirme;
 
-    // Constructeur pour initialiser nom, niveau de vie, et estConfirme
-    public Magicien(String nom, int niveauVie, boolean estConfirme) {
-        super(nom, niveauVie);
-        this.estConfirme = estConfirme;
+    // Attribut statique pour le nombre de magiciens
+    private static int nombreMagiciens = 0;
+
+    // Constructeur de Magicien
+    public Magicien(String nom, int niveauDeVie, boolean confirme) {
+        super(nom, niveauDeVie);
+        this.confirme = confirme;
+
+        // Incrémentation du compteur de magiciens
+        nombreMagiciens++;
     }
 
-    // Getter pour estConfirme
-    public boolean isEstConfirme() {
-        return estConfirme;
+    // Setter pour confirme
+    public void setConfirme(boolean confirme) {
+        this.confirme = confirme;
     }
 
-    // Setter pour estConfirme
-    public void setEstConfirme(boolean estConfirme) {
-        this.estConfirme = estConfirme;
+    // Getter pour confirme
+    public boolean estConfirme() {
+        return confirme;
     }
 
-    // Redéfinition de la méthode toString pour afficher les informations du magicien
+    // Méthode statique pour obtenir le nombre de magiciens
+    public static int getNombreMagiciens() {
+        return nombreMagiciens;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            nombreMagiciens--;  // Décrémentation lors de la destruction d'un magicien
+        } finally {
+            super.finalize();  // Appel à la méthode finalize() de la superclasse
+        }
+    }
     @Override
     public String toString() {
-        return super.toString() + ", Magicien confirmé: " + estConfirme;
+        return super.toString() + ", Confirme : " + (confirme ? "Oui" : "Non");
     }
 }

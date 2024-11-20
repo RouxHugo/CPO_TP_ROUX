@@ -11,9 +11,20 @@ package Personnages;
 public class Guerrier extends Personnage {
     private boolean aCheval;
 
-    // Constructeur pour initialiser nom, niveau de vie, et aCheval
-    public Guerrier(String nom, int niveauVie, boolean aCheval) {
-        super(nom, niveauVie);
+    // Attribut statique pour le nombre de guerriers
+    private static int nombreGuerriers = 0;
+
+    // Constructeur de Guerrier
+    public Guerrier(String nom, int niveauDeVie, boolean aCheval) {
+        super(nom, niveauDeVie);
+        this.aCheval = aCheval;
+
+        // Incrémentation du compteur de guerriers
+        nombreGuerriers++;
+    }
+
+    // Setter pour aCheval
+    public void setACheval(boolean aCheval) {
         this.aCheval = aCheval;
     }
 
@@ -22,14 +33,21 @@ public class Guerrier extends Personnage {
         return aCheval;
     }
 
-    // Setter pour aCheval
-    public void setACheval(boolean aCheval) {
-        this.aCheval = aCheval;
+    // Méthode statique pour obtenir le nombre de guerriers
+    public static int getNombreGuerriers() {
+        return nombreGuerriers;
     }
 
-    // Redéfinition de la méthode toString pour afficher les informations du guerrier
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            nombreGuerriers--;  // Décrémentation lors de la destruction d'un guerrier
+        } finally {
+            super.finalize();  // Appel à la méthode finalize() de la superclasse
+        }
+    }
     @Override
     public String toString() {
-        return super.toString() + ", Guerrier à cheval: " + aCheval;
+        return super.toString() + ", A cheval : " + (aCheval ? "Oui" : "Non");
     }
 }

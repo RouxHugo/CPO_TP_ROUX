@@ -8,21 +8,26 @@ package Armes;
  *
  * @author hugor
  */
-public class Epee extends Arme {
-    
+public class Epee extends Arme{
     int finesse;
-    
-     public Epee(String nom, int niveauAttaque, int finesse) {
-        super(nom, niveauAttaque); // Appel du constructeur de Arme pour nom et niveauAttaque
 
-        // Limite l'indice de finesse à 100 maximum
-        if (finesse <= 100) {
-            this.finesse = finesse;
-        } else {
-            this.finesse = 100; // Limite la finesse à 100 si dépassement
-        }
-    
-        
+    public Epee(String nom, int Attaque,int finesse) {
+        super(nom, Attaque);
+        this.finesse =  Math.max(0, Math.min(finesse, 100));
+
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Finesse : " + finesse;
+    }
+    // Getter pour le niveau d'attaque
+    public int getNiveauAttaque() {
+        return Attaque;
+    }
+
+    // Getter pour la finesse de l'épée
+    public int getFinesse() {
+        return finesse;
     }
 }
-
